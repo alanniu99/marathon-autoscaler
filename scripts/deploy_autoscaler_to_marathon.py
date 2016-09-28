@@ -11,7 +11,7 @@ import sys
 
 sys.path.append('../lib/marathon_autoscaler')
 
-from marathon_autoscaler.marathon import Marathon
+from marathon import Marathon
 
 
 def load_app_definition():
