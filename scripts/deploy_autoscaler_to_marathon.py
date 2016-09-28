@@ -70,7 +70,7 @@ if __name__ == "__main__":
     app_def["env"]["DATADOG_ENV"] = args.datadog_env
     app_def["env"]["ENFORCE_VERSION_MATCH"] = args.enforce_version_match
     app_def["env"]["RULES_PREFIX"] = args.rules_prefix
-    app_json = json.dump(app_def)
+    app_json = json.dumps(app_def)
     mara = Marathon(args.marathon_uri, (args.marathon_user, args.marathon_pass))
     response = mara.create_app(app_json)
     print(response)
