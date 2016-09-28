@@ -45,7 +45,7 @@ def parse_cli_args():
     p.add_argument("--dd-env", dest="datadog_env", type=str,
                    required=True, help="Datadog ENV variable")
     p.add_argument("--enforce-version-match", dest="enforce_version_match",
-                   type=bool, default=false, required=False,
+                   type=bool, default=False, required=False,
                    help="If set, version matching will be required of applications to participate")
     p.add_argument("--rules-prefix", dest="rules_prefix",
                    type=str, default="mas_rule", required=False,
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     app_def["env"]["DATADOG_ENV"] = args.datadog_env
     app_def["env"]["ENFORCE_VERSION_MATCH"] = args.enforce_version_match
     app_def["env"]["RULES_PREFIX"] = args.rules_prefix
-
+    app_json = json.dump(app_def)
     mara = Marathon(args.marathon_uri, (args.marathon_user, args.marathon_pass))
-    response = mara.create_app(app_def)
+    response = mara.create_app(app_json)
     print(response)
