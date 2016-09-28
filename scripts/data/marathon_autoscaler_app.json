@@ -8,7 +8,7 @@
   "container": {
     "docker": {
       "forcePullImage": true,
-      "image": "marathon_autoscaler:latest",
+      "image": "dockerniu/marathon_autoscaler",
       "network": "BRIDGE",
       "parameters": [],
       "privileged": false
@@ -40,15 +40,7 @@
     "LOG_VERBOSITY": "",
     "CPU_FAN_OUT": ""
   },
-  "executor": "",
-  "fetch": [
-    {
-      "cache": false,
-      "executable": false,
-      "extract": true,
-      "uri": "file:///root/.dockercfg"
-    }
-  ],
+  "executor": "", 
   "healthChecks": [
     {
       "protocol": "COMMAND",
