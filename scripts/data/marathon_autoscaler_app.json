@@ -51,7 +51,7 @@
       "maxConsecutiveFailures": 3
     }
   ],
-  "id": "/marathon-autoscaler",
+  "id": "marathon-autoscaler",
   "instances": 1,
   "ipAddress": null,
   "labels": {},
