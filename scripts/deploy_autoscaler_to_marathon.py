@@ -9,7 +9,7 @@ import json
 import os
 import sys
 
-sys.path.append('../lib/marathon_autoscaler')
+sys.path.append('../lib/marathon-autoscaler')
 
 from marathon import Marathon
 
