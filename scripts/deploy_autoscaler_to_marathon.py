@@ -45,7 +45,7 @@ def parse_cli_args():
     p.add_argument("--dd-env", dest="datadog_env", type=str,
                    required=True, help="Datadog ENV variable")
     p.add_argument("--enforce-version-match", dest="enforce_version_match",
-                   type=bool, default=False, required=False,
+                   type=bool, default=false, required=False,
                    help="If set, version matching will be required of applications to participate")
     p.add_argument("--rules-prefix", dest="rules_prefix",
                    type=str, default="mas_rule", required=False,
